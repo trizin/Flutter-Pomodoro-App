@@ -130,4 +130,14 @@ class Pomodoro {
   void toggleRunning() {
     running = !running;
   }
+
+  void resetProgress() async {
+    count = 0;
+    step = 0;
+    mode = PMode.Study;
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('counter', count);
+    await prefs.setInt('mode', PMode.values.indexOf(mode));
+    await prefs.setInt('step', step);
+  }
 }

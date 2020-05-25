@@ -108,6 +108,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             onPressed: () => pomodoro.skip(),
                             iconSize: 55,
                             color: Colors.grey),
+                        IconButton(
+                            icon: Icon(Icons.undo),
+                            onPressed: () => pomodoro.resetProgress(),
+                            iconSize: 55,
+                            color: Colors.grey),
                         /* IconButton(
                             icon: Icon(Icons.settings),
                             onPressed: () => null,
