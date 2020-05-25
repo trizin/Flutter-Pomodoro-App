@@ -12,20 +12,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: HomePage(),
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: Colors.indigo,
+          accentColor: Colors.red,
           canvasColor: Color(0xFF111111),
           textTheme: TextTheme(
               bodyText1: TextStyle(
                   color: Colors.white,
                   fontFamily: "sans-serif",
-                  fontSize: 85,
-                  fontWeight: FontWeight.w300),
+                  fontSize: 125,
+                  fontWeight: FontWeight.w200),
               bodyText2: TextStyle(
                   color: Colors.white,
                   fontFamily: "sans-serif",
-                  fontSize: 85,
-                  fontWeight: FontWeight.w700))),
+                  fontSize: 35,
+                  fontWeight: FontWeight.normal))),
     );
   }
 }
