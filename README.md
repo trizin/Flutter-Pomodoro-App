@@ -1,8 +1,11 @@
 # Pomodoro Counter
 
 Simple Pomodoro Counter app made in flutter.
+
 ## What it looks like
+
 ![animation](./pek.gif)
 
 ## Problems
-- The timer won't work on background.
+
+- The timer won't work in background.

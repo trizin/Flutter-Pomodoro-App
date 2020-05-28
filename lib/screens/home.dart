@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pomodoro/models/pomodoro.dart';
+import 'package:pomodoro/widgets/digit.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -60,12 +61,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     Stack(
                       children: <Widget>[
                         Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Text(
+                            padding: const EdgeInsets.all(12.0),
+                            child: AnimatedFlipCounter(
+                              duration: Duration(milliseconds: 100),
+                              value: pomodoro.readTime,
+                              /* pass in a number like 2014 */
+                              color: Colors.black,
+                              size: MediaQuery.of(context).size.width / 3,
+                            )
+
+                            /* Text(
                             pomodoro.readTime,
                             style: (Theme.of(context).textTheme.bodyText1),
-                          ),
-                        ),
+                          ), */
+                            ),
                         Positioned(
                           child: RotationTransition(
                             turns: AlwaysStoppedAnimation(5 / 100),
