@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pomodoro/models/pomodoro.dart';
 import 'package:pomodoro/widgets/digit.dart';
+import 'package:screen/screen.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -34,6 +35,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         pomodoro.increasePomodoro();
       });
     });
+    Screen.keepOn(true);
   }
 
   _onpressed() {
