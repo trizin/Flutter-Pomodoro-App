@@ -1,6 +1,6 @@
 # Pomodoro Counter
 
-Simple Pomodoro Counter app made in flutter.
+Simple Pomodoro counter app made in flutter.
 
 ## What it looks like
 
